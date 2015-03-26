@@ -1,0 +1,7 @@
+.autotest
+History.rdoc
+Manifest.txt
+README.rdoc
+Rakefile
+lib/debride_erb.rb
+test/test_debride_erb.rb
