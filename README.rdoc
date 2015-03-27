@@ -5,19 +5,24 @@ rdoc :: http://docs.seattlerb.org/debride-erb
 
 == DESCRIPTION:
 
-FIX (describe your package)
+Extends debride to analyze erb files (erubis ala rails, actually).
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* Plugs into debride to offer the ability to process .erb files.
+* Includes rails' monkeypatches to extend erubis for <%= block forms.
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+  # none, really...
+  % gem install debride-erb
+  % debride app lib
+  ...
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* debride 1.2.0 and up
+* erubis
 
 == INSTALL:
 
