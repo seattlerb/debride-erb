@@ -4,4 +4,5 @@ Manifest.txt
 README.rdoc
 Rakefile
 lib/debride_erb.rb
+test/file.erb
 test/test_debride_erb.rb
