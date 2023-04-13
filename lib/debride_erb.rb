@@ -2,7 +2,7 @@
 
 require "debride"
 require "erb"
-require "erubis"
+require "erubi"
 
 class Debride
   module Erb
@@ -16,33 +16,12 @@ class Debride
   def process_erb file
     erb = File.read file
 
-    ruby = Erubis.new(erb).src
-
+    ruby = Erubi::Engine.new(erb, freeze_template_literals: false).src
     begin
       RubyParser.new.process ruby, file
     rescue => e
       warn ruby if option[:verbose]
       raise e
-    end
-  end
-
-  class Erubis < ::Erubis::Eruby # :nodoc:
-    BLOCK_EXPR = /\s+(do|\{)(\s*\|[^|]*\|)?\s*\Z/
-
-    def add_expr_literal(src, code)
-      if code =~ BLOCK_EXPR
-        src << '@output_buffer.append= ' << code
-      else
-        src << '@output_buffer.append=(' << code << ');'
-      end
-    end
-
-    def add_expr_escaped(src, code)
-      if code =~ BLOCK_EXPR
-        src << "@output_buffer.safe_append= " << code
-      else
-        src << "@output_buffer.safe_append=(" << code << ");"
-      end
     end
   end
 end

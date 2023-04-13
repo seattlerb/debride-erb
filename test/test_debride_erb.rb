@@ -8,7 +8,7 @@ class TestDebride::TestErb < Minitest::Test
     sexp = Debride.new.process_erb "test/file.erb"
 
     exp = s(:block,
-            s(:lasgn, :_buf, s(:str, "")),
+            s(:lasgn, :_buf, s(:call, s(:colon3, :String), :new)),
             s(:call, s(:lvar, :_buf), :<<, s(:str, "woot")),
             s(:call, s(:lvar, :_buf), :to_s))
 

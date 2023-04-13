@@ -13,7 +13,7 @@ Hoe.spec "debride-erb" do
   license "MIT"
 
   dependency "debride", "~> 1.2"
-  dependency "erubis", "~> 2.7.0"
+  dependency "erubi",   "~> 1.10"
 end
 
 # vim: syntax=ruby
