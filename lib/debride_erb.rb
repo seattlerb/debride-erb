@@ -27,6 +27,7 @@ class Debride
   end
 
   # stolen (and munged) from lib/action_view/template/handlers/erb/erubi.rb
+  # this is also in the flay gem, update both!
   class Erubi < ::Erubi::Engine
     # :nodoc: all
     def initialize(input, properties = {})
