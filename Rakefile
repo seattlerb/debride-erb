@@ -12,7 +12,7 @@ Hoe.spec "debride-erb" do
 
   license "MIT"
 
-  dependency "debride", "~> 1.2"
+  dependency "debride", "~> 1.15"
   dependency "erubi",   "~> 1.10"
 end
 

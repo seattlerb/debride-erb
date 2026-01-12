@@ -19,7 +19,7 @@ class Debride
     ruby = Erubi.new(erb).src
 
     begin
-      RubyParser.new.process ruby, file
+      NotRubyParser.new.process ruby, file
     rescue => e
       warn ruby if option[:verbose]
       raise e
