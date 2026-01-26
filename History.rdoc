@@ -1,3 +1,9 @@
+=== 1.0.3 / 2026-01-26
+
+* 1 bug fix:
+
+  * Bump debride dependency to pick up prism version.
+
 === 1.0.2 / 2023-05-02
 
 * 1 major enhancement:
